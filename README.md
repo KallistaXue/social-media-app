@@ -52,7 +52,7 @@ GET  {{base_url}}/users/user-info/{user_id}
 | user_id | int  | The ID of the user.  | Yes      |
 
 ##### 4. Update user information (can apply partial updates)
-PATCH  {{base_url}}/users/user-update/{user_id}
+PUT  {{base_url}}/users/user-update/{user_id}
 
 ###### Path Variables
 | Name    | Type | Description          | Required |
@@ -62,12 +62,12 @@ PATCH  {{base_url}}/users/user-update/{user_id}
 ###### Query Parameters
 | Name          | Type   | Description                      | Required |
 |---------------|--------|----------------------------------|----------|
-| username      | string | The unique username of the user. | No       |
-| first name    | string | The first name of the user.      | No       |
-| last name     | string | The last name of the user.       | No       |
-| email         | string | The email address of the user.   | No       |
-| password      | string | The password of the user.        | No       |
-| date of birth | string | format: month-date-year.         | No       |
+| username      | string | The unique username of the user. | Yes      |
+| first name    | string | The first name of the user.      | Yes      |
+| last name     | string | The last name of the user.       | Yes      |
+| email         | string | The email address of the user.   | Yes      |
+| password      | string | The password of the user.        | Yes      |
+| date of birth | string | format: month-date-year.         | Yes      |
 
 ##### 5. Delete a user
 DELETE  {{base_url}}/users/user-delete/{user_id}
@@ -76,3 +76,45 @@ DELETE  {{base_url}}/users/user-delete/{user_id}
 | Name    | Type | Description          | Required |
 |---------|------|----------------------|----------|
 | user_id | int  | The ID of the user.  | Yes      |
+
+
+
+#### Posts
+
+##### 1. Create a post
+POST  {{base_url}}/posts/post-create
+
+###### Query Parameters
+| Name    | Type   | Description                      | Required |
+|---------|--------|----------------------------------|----------|
+| user_id | int    | The ID of the user who posts.    | Yes      |
+| content | string | The content of the post.         | Yes      |
+
+##### 2. Get a post (post display)
+GET  {{base_url}}/posts/post-info/{post_id}
+
+###### Path Variables
+| Name    | Type | Description          | Required |
+|---------|------|----------------------|----------|
+| post_id | int  | The ID of the post.  | Yes      |
+
+##### 3. Update a post
+PUT  {{base_url}}/posts/post-update/{post_id}
+
+###### Path Variables
+| Name    | Type | Description          | Required |
+|---------|------|----------------------|----------|
+| post_id | int  | The ID of the post.  | Yes      |
+
+###### Query Parameters
+| Name    | Type   | Description               | Required |
+|---------|--------|---------------------------|----------|
+| content | string | The updated post content. | Yes      |
+
+##### 4. Delete a post
+DELETE  {{base_url}}/posts/post-delete/{post_id}
+
+###### Path Variables
+| Name    | Type | Description          | Required |
+|---------|------|----------------------|----------|
+| post_id | int  | The ID of the post.  | Yes      |
