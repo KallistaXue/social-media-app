@@ -13,9 +13,9 @@
 
     <insert id="insert">
         INSERT INTO public."Users"
-        (user_id, username, firstname, lastname, email, password, date_of_birth)
+        (username, firstname, lastname, email, password, date_of_birth)
         VALUES
-        (#{user_id}, #{username}, #{firstname}, #{lastname}, #{email}, #{password}, #{date_of_birth})
+        (#{username}, #{firstname}, #{lastname}, #{email}, #{password}, #{date_of_birth})
     </insert>
 
     <delete id="delete">

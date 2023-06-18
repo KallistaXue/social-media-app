@@ -1,14 +1,14 @@
 package com.example.social_media_app.entity;
 import java.util.Objects;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Entity;
+import javax.persistence.*;
+
 @Entity
+@Table(name = "Users")
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int user_id;
+    @Column(name = "user_id", updatable = false, nullable = false)
+    private Long user_id;
     private String username;
     private String firstname;
     private String lastname;
@@ -28,11 +28,11 @@ public class Users {
                 ", date_of_birth='" + date_of_birth + '\'' +
                 '}';
     }
-    public int getUser_id() {
+    public Long getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Long user_id) {
         this.user_id = user_id;
     }
 

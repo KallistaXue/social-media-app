@@ -39,7 +39,7 @@ public class UserMapperTest {
 
     @Test
     public void delete(){
-        UserMapper.delete(1);
+        UserMapper.delete(2);
     }
 
     @Test

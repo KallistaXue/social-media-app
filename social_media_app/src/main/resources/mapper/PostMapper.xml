@@ -9,9 +9,9 @@
 
     <insert id="insert">
         INSERT INTO public."Posts"
-        (post_id, user_id, post_content)
+        (user_id, post_content)
         VALUES
-        (#{post_id}, #{user_id}, #{post_content})
+        (#{user_id}, #{post_content})
     </insert>
 
     <delete id="delete">

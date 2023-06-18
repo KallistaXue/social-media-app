@@ -1,18 +1,18 @@
 package com.example.social_media_app.entity;
 import java.util.Objects;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Entity;
+import javax.persistence.*;
+
 @Entity
+@Table(name = "Posts")
 public class Posts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int post_id;
+    @Column(name = "post_id", updatable = false, nullable = false)
+    private Long post_id;
     private String post_content;
     private int user_id;
 
-    public int getPost_id() {
+    public Long getPost_id() {
         return post_id;
     }
 
@@ -22,10 +22,6 @@ public class Posts {
 
     public int getUser_id() {
         return user_id;
-    }
-
-    public void setPost_id(int post_id) {
-        this.post_id = post_id;
     }
 
     public void setPost_content(String post_content) {
@@ -40,7 +36,7 @@ public class Posts {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Posts posts)) return false;
-        return getPost_id() == posts.getPost_id() && getUser_id() == posts.getUser_id() && Objects.equals(getPost_content(), posts.getPost_content());
+        return getPost_id().equals(posts.getPost_id()) && getUser_id() == posts.getUser_id() && Objects.equals(getPost_content(), posts.getPost_content());
     }
 
     @Override
@@ -48,4 +44,3 @@ public class Posts {
         return Objects.hash(getPost_id(), getPost_content(), getUser_id());
     }
 }
-
