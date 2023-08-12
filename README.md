@@ -98,7 +98,7 @@ GET  {{base_url}}/posts/post-info/{post_id}
 |---------|------|----------------------|----------|
 | post_id | int  | The ID of the post.  | Yes      |
 
-##### 3. Update a post
+##### 3. Update post content
 PUT  {{base_url}}/posts/post-update/{post_id}
 
 ###### Path Variables
@@ -118,3 +118,55 @@ DELETE  {{base_url}}/posts/post-delete/{post_id}
 | Name    | Type | Description          | Required |
 |---------|------|----------------------|----------|
 | post_id | int  | The ID of the post.  | Yes      |
+
+
+
+#### Comments
+
+##### 1. Create a comment under a post
+POST  {{base_url}}/comments/comment-create
+
+###### Query Parameters
+| Name    | Type   | Description                      | Required |
+|---------|--------|----------------------------------|----------|
+| content | string | The content of the comment.      | Yes      |
+| user_id | int    | The ID of the user who comments. | Yes      |
+| post_id | int    | The ID of the post.              | Yes      |
+
+##### 2. Get a comment (comment display)
+GET  {{base_url}}/comments/comment-info/{comment_id}
+
+###### Path Variables
+| Name       | Type | Description           | Required |
+|------------|------|-----------------------|----------|
+| comment_id | int  | The ID of the comment.| Yes      |
+
+##### 3. Delete a comment
+DELETE  {{base_url}}/comments/comment-delete/{comment_id}
+
+###### Path Variables
+| Name       | Type | Description           | Required |
+|------------|------|-----------------------|----------|
+| comment_id | int  | The ID of the comment.| Yes      |
+
+
+
+#### Likes
+
+##### 1. Create a like (like a post)
+POST  {{base_url}}/likes/like-create
+
+###### Query Parameters
+| Name    | Type | Description         | Required |
+|---------|------|---------------------|----------|
+| user_id | int  | The ID of the user. | Yes      |
+| post_id | int  | The ID of the post. | Yes      |
+
+##### 2. Delete a like (unlike a post)
+DELETE  {{base_url}}/likes/like-delete/{like_id}
+
+###### Path Variables
+| Name    | Type | Description           | Required |
+|---------|------|-----------------------|----------|
+| like_id | int  | The ID of the like.   | Yes      |
+
