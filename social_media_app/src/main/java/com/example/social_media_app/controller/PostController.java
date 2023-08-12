@@ -16,7 +16,7 @@ public class PostController {
 
     @ResponseBody
     @RequestMapping(method = RequestMethod.GET, value = "/posts/post-info/{post_id}")
-    public Object userInfo(@PathVariable int post_id){
+    public Object postInfo(@PathVariable int post_id){
         return PostService.postInfo(post_id);
     }
 
