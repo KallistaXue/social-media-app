@@ -162,7 +162,15 @@ POST  {{base_url}}/likes/like-create
 | user_id | int  | The ID of the user. | Yes      |
 | post_id | int  | The ID of the post. | Yes      |
 
-##### 2. Delete a like (unlike a post)
+##### 2. Get a like (like display)
+GET  {{base_url}}/likes/like-info/{like_id}
+
+###### Path Variables
+| Name    | Type | Description           | Required |
+|---------|------|-----------------------|----------|
+| like_id | int  | The ID of the like.   | Yes      |
+
+##### 3. Delete a like (unlike a post)
 DELETE  {{base_url}}/likes/like-delete/{like_id}
 
 ###### Path Variables
