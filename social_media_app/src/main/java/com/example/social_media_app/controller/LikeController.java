@@ -27,6 +27,5 @@ public class LikeController {
         return LikeService.likeDelete(like_id);
     }
 
-
 }
 
