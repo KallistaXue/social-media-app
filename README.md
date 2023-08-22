@@ -9,7 +9,6 @@
 - [Libraries and Tools Used](#libraries-and-tools-used)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Project Description
 
