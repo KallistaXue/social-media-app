@@ -1,15 +1,58 @@
 # Social Media Application
+
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Prerequisites](#prerequisites)
+- [Setup and Installation](#setup-and-installation)
+- [API Endpoints and Usage](#api-endpoints-and-usage)
+- [Libraries and Tools Used](#libraries-and-tools-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+## Project Description
+
+This is a simplified social media application built for learning and demonstration. This project provides a hands-on implementation of common social media functionalities including user registration, profile management, post creation, commenting, and liking posts. This repository contains the code for a Social Media App API built using Java and PostgreSQL. The API has been tested using Postman.
+
+## Prerequisites
+
+- Java JDK (version 20.0.1)
+- PostgreSQL (pgAdmin4)
+- IntelliJ IDEA or any Java IDE
+- Postman for API testing
+
+## Setup and Installation
+
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/KallistaXue/social-media-app.git
+    ```
+
+2. Navigate into the repository:
+    ```bash
+    cd social-media-app
+    ```
+
+3. Open the project in IntelliJ IDEA or your preferred IDE.
+
+4. Set up PostgreSQL using pgAdmin4 and run the database schema.
+
+5. Build the project and run.
+
+6. Test the API using Postman. 
+
 ## Introduction 
 This is a social media app where users can connect, share, and engage with the world. 
 Functions includes:
 - Register user account and create user profile
 - Log in to user account
 - Post (create/update/display/delete)
-- Comment
-- Like
+- Comment on a post
+- Like a post
 
-## API (Application Programming Interface)
-API documentation for the social media app, including resources and endpoints design 
+## API Endpoints and Usage
+API (Application Programming Interface) documentation for the social media app, including resources and endpoints design.
 
 ### Resources 
 - Users
@@ -178,3 +221,35 @@ DELETE  {{base_url}}/likes/like-delete/{like_id}
 |---------|------|-----------------------|----------|
 | like_id | int  | The ID of the like.   | Yes      |
 
+## Libraries and Tools Used
+
+- Java
+- PostgreSQL (pgAdmin4)
+- IntelliJ IDEA
+- Postman
+
+## Contributing
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch 
+```
+git checkout -b new-feature
+```
+3. Make your changes
+4. Commit your changes 
+```
+git commit -m 'Add some feature'
+```
+
+5. Push to the branch 
+```
+git push origin new-feature
+```
+6. Create a new Pull Request
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
