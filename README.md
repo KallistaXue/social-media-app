@@ -4,10 +4,10 @@
 
 - [Project Description](#project-description)
 - [Prerequisites](#prerequisites)
+- [Libraries and Tools Used](#libraries-and-tools-used)
 - [Setup and Installation](#setup-and-installation)
 - [API Endpoints and Usage](#api-endpoints-and-usage)
 - [Database Entity-Relationship Diagram (ERD)](#database-entity-relationship-diagram-erd)
-- [Libraries and Tools Used](#libraries-and-tools-used)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -30,6 +30,13 @@ Functions include:
 - PostgreSQL (pgAdmin4)
 - IntelliJ IDEA or any Java IDE
 - Postman for API testing
+
+## Libraries and Tools Used
+
+- Java
+- PostgreSQL (pgAdmin4)
+- IntelliJ IDEA
+- Postman
 
 ## Setup and Installation
 
@@ -227,14 +234,6 @@ DELETE  {{base_url}}/likes/like-delete/{like_id}
 
 ![db plot](SocialMediaApp_ERD.jpg)
 
-
-
-## Libraries and Tools Used
-
-- Java
-- PostgreSQL (pgAdmin4)
-- IntelliJ IDEA
-- Postman
 
 ## Contributing
 
