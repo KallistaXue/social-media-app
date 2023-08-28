@@ -68,57 +68,59 @@ API (Application Programming Interface) documentation for the social media app, 
 POST  {{base_url}}/users/user-register
 
 ###### Query Parameters
-| Name          | Type   | Description                      | Required |
-|---------------|--------|----------------------------------|----------|
-| username      | string | The unique username of the user. | Yes      |
-| first name    | string | The first name of the user.      | Yes      |
-| last name     | string | The last name of the user.       | Yes      |
-| email         | string | The email address of the user.   | Yes      |
-| password      | string | The password of the user.        | Yes      |
-| date of birth | string | format: month-date-year.         | No       |
+| Name          | Type   | Description                      | 
+|---------------|--------|----------------------------------|
+| username      | string | The unique username of the user. |
+| first name    | string | The first name of the user.      | 
+| last name     | string | The last name of the user.       | 
+| email         | string | The email address of the user.   | 
+| password      | string | The password of the user.        | 
+| date of birth | string | format: month-date-year.         | 
+
+
 
 ##### 2. Log in to user account
 POST  {{base_url}}/users/user-login
 
 ###### Query Parameters
-| Name          | Type   | Description                      | Required |
-|---------------|--------|----------------------------------|----------|
-| username      | string | The username of the user.        | Yes      |
-| password      | string | The password of the user.        | Yes      |
+| Name          | Type   | Description                      |
+|---------------|--------|----------------------------------|
+| username      | string | The username of the user.        |
+| password      | string | The password of the user.        | 
 
 ##### 3. Get user information (eg. display user information on a profile page)
 GET  {{base_url}}/users/user-info/{user_id}
 
 ###### Path Variables
-| Name    | Type | Description          | Required |
-|---------|------|----------------------|----------|
-| user_id | int  | The ID of the user.  | Yes      |
+| Name    | Type | Description          | 
+|---------|------|----------------------|
+| user_id | int  | The ID of the user.  |
 
 ##### 4. Update user information (can apply partial updates)
 PUT  {{base_url}}/users/user-update/{user_id}
 
 ###### Path Variables
-| Name    | Type | Description          | Required |
-|---------|------|----------------------|----------|
-| user_id | int  | The ID of the user.  | Yes      |
+| Name    | Type | Description          | 
+|---------|------|----------------------|
+| user_id | int  | The ID of the user.  |
 
 ###### Query Parameters
-| Name          | Type   | Description                      | Required |
-|---------------|--------|----------------------------------|----------|
-| username      | string | The unique username of the user. | Yes      |
-| first name    | string | The first name of the user.      | Yes      |
-| last name     | string | The last name of the user.       | Yes      |
-| email         | string | The email address of the user.   | Yes      |
-| password      | string | The password of the user.        | Yes      |
-| date of birth | string | format: month-date-year.         | Yes      |
+| Name          | Type   | Description                      | 
+|---------------|--------|----------------------------------|
+| username      | string | The unique username of the user. | 
+| first name    | string | The first name of the user.      | 
+| last name     | string | The last name of the user.       | 
+| email         | string | The email address of the user.   |
+| password      | string | The password of the user.        |
+| date of birth | string | format: month-date-year.         | 
 
 ##### 5. Delete a user
 DELETE  {{base_url}}/users/user-delete/{user_id}
 
 ###### Path Variables
-| Name    | Type | Description          | Required |
-|---------|------|----------------------|----------|
-| user_id | int  | The ID of the user.  | Yes      |
+| Name    | Type | Description          | 
+|---------|------|----------------------|
+| user_id | int  | The ID of the user.  | 
 
 
 
@@ -128,39 +130,38 @@ DELETE  {{base_url}}/users/user-delete/{user_id}
 POST  {{base_url}}/posts/post-create
 
 ###### Query Parameters
-| Name    | Type   | Description                      | Required |
-|---------|--------|----------------------------------|----------|
-| user_id | int    | The ID of the user who posts.    | Yes      |
-| content | string | The content of the post.         | Yes      |
+| Name    | Type   | Description                      | 
+|---------|--------|----------------------------------|
+| user_id | int    | The ID of the user who posts.    |
+| content | string | The content of the post.         | 
 
 ##### 2. Get a post (post display)
 GET  {{base_url}}/posts/post-info/{post_id}
 
 ###### Path Variables
-| Name    | Type | Description          | Required |
-|---------|------|----------------------|----------|
-| post_id | int  | The ID of the post.  | Yes      |
+| Name    | Type | Description          | 
+|---------|------|----------------------|
+| post_id | int  | The ID of the post.  | 
 
 ##### 3. Update post content
 PUT  {{base_url}}/posts/post-update/{post_id}
 
 ###### Path Variables
-| Name    | Type | Description          | Required |
-|---------|------|----------------------|----------|
-| post_id | int  | The ID of the post.  | Yes      |
-
+| Name    | Type | Description          | 
+|---------|------|----------------------|
+| post_id | int  | The ID of the post.  |
 ###### Query Parameters
-| Name    | Type   | Description               | Required |
-|---------|--------|---------------------------|----------|
-| content | string | The updated post content. | Yes      |
+| Name    | Type   | Description               | 
+|---------|--------|---------------------------|
+| content | string | The updated post content. |
 
 ##### 4. Delete a post
 DELETE  {{base_url}}/posts/post-delete/{post_id}
 
 ###### Path Variables
-| Name    | Type | Description          | Required |
-|---------|------|----------------------|----------|
-| post_id | int  | The ID of the post.  | Yes      |
+| Name    | Type | Description          | 
+|---------|------|----------------------|
+| post_id | int  | The ID of the post.  |
 
 
 
@@ -170,27 +171,27 @@ DELETE  {{base_url}}/posts/post-delete/{post_id}
 POST  {{base_url}}/comments/comment-create
 
 ###### Query Parameters
-| Name    | Type   | Description                      | Required |
-|---------|--------|----------------------------------|----------|
-| content | string | The content of the comment.      | Yes      |
-| user_id | int    | The ID of the user who comments. | Yes      |
-| post_id | int    | The ID of the post.              | Yes      |
+| Name    | Type   | Description                      |
+|---------|--------|----------------------------------|
+| content | string | The content of the comment.      |
+| user_id | int    | The ID of the user who comments. | 
+| post_id | int    | The ID of the post.              | 
 
 ##### 2. Get a comment (comment display)
 GET  {{base_url}}/comments/comment-info/{comment_id}
 
 ###### Path Variables
-| Name       | Type | Description           | Required |
-|------------|------|-----------------------|----------|
-| comment_id | int  | The ID of the comment.| Yes      |
+| Name       | Type | Description           | 
+|------------|------|-----------------------|
+| comment_id | int  | The ID of the comment.| 
 
 ##### 3. Delete a comment
 DELETE  {{base_url}}/comments/comment-delete/{comment_id}
 
 ###### Path Variables
-| Name       | Type | Description           | Required |
-|------------|------|-----------------------|----------|
-| comment_id | int  | The ID of the comment.| Yes      |
+| Name       | Type | Description           | 
+|------------|------|-----------------------|
+| comment_id | int  | The ID of the comment.| 
 
 
 
@@ -200,26 +201,26 @@ DELETE  {{base_url}}/comments/comment-delete/{comment_id}
 POST  {{base_url}}/likes/like-create
 
 ###### Query Parameters
-| Name    | Type | Description         | Required |
-|---------|------|---------------------|----------|
-| user_id | int  | The ID of the user. | Yes      |
-| post_id | int  | The ID of the post. | Yes      |
+| Name    | Type | Description         | 
+|---------|------|---------------------|
+| user_id | int  | The ID of the user. | 
+| post_id | int  | The ID of the post. |
 
 ##### 2. Get a like (like display)
 GET  {{base_url}}/likes/like-info/{like_id}
 
 ###### Path Variables
-| Name    | Type | Description           | Required |
-|---------|------|-----------------------|----------|
-| like_id | int  | The ID of the like.   | Yes      |
+| Name    | Type | Description           | 
+|---------|------|-----------------------|
+| like_id | int  | The ID of the like.   | 
 
 ##### 3. Delete a like (unlike a post)
 DELETE  {{base_url}}/likes/like-delete/{like_id}
 
 ###### Path Variables
-| Name    | Type | Description           | Required |
-|---------|------|-----------------------|----------|
-| like_id | int  | The ID of the like.   | Yes      |
+| Name    | Type | Description           |
+|---------|------|-----------------------|
+| like_id | int  | The ID of the like.   | 
 
 ## Libraries and Tools Used
 
