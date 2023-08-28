@@ -6,6 +6,7 @@
 - [Prerequisites](#prerequisites)
 - [Setup and Installation](#setup-and-installation)
 - [API Endpoints and Usage](#api-endpoints-and-usage)
+- [Database Relation Diagram](#database-relation-diagram)
 - [Libraries and Tools Used](#libraries-and-tools-used)
 - [Contributing](#contributing)
 - [License](#license)
@@ -221,6 +222,12 @@ DELETE  {{base_url}}/likes/like-delete/{like_id}
 | Name    | Type | Description           |
 |---------|------|-----------------------|
 | like_id | int  | The ID of the like.   | 
+
+## Database Relation Diagram
+
+![db plot](SocialMediaApp_db.jpg)
+
+
 
 ## Libraries and Tools Used
 
