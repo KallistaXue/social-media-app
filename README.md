@@ -6,7 +6,7 @@
 - [Prerequisites](#prerequisites)
 - [Setup and Installation](#setup-and-installation)
 - [API Endpoints and Usage](#api-endpoints-and-usage)
-- [Database Relation Diagram](#database-relation-diagram)
+- [Database Entity-Relationship Diagram (ERD)](#database-entity-relationship-diagram-erd)
 - [Libraries and Tools Used](#libraries-and-tools-used)
 - [Contributing](#contributing)
 - [License](#license)
@@ -223,9 +223,9 @@ DELETE  {{base_url}}/likes/like-delete/{like_id}
 |---------|------|-----------------------|
 | like_id | int  | The ID of the like.   | 
 
-## Database Relation Diagram
+## Database Entity-Relationship Diagram (ERD)
 
-![db plot](SocialMediaApp_db.jpg)
+![db plot](SocialMediaApp_ERD.jpg)
 
 
 
