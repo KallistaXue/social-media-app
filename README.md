@@ -14,6 +14,15 @@
 
 This is a simplified social media application built for learning and demonstration. This project provides a hands-on implementation of common social media functionalities including user registration, profile management, post creation, commenting, and liking posts. This repository contains the code for a Social Media App API built using Java and PostgreSQL. The API has been tested using Postman.
 
+Functions include:
+- Register user account
+- Create and manage user profile
+- Log in to user account
+- Post create, update and delete
+- Display a user's posts
+- Comment (on a post) create and delete
+- Like and unlike (a post)
+
 ## Prerequisites
 
 - Java JDK (version 20.0.1)
@@ -41,14 +50,6 @@ This is a simplified social media application built for learning and demonstrati
 
 6. Test the API using Postman. 
 
-## Introduction 
-This is a social media app where users can connect, share, and engage with the world. 
-Functions includes:
-- Register user account and create user profile
-- Log in to user account
-- Post (create/update/display/delete)
-- Comment on a post
-- Like a post
 
 ## API Endpoints and Usage
 API (Application Programming Interface) documentation for the social media app, including resources and endpoints design.
