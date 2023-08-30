@@ -4,7 +4,7 @@
 
 - [Project Description](#project-description)
 - [Prerequisites](#prerequisites)
-- [Libraries and Tools Used](#libraries-and-tools-used)
+- [Libraries and Frameworks Used](#libraries-and-frameworks-used)
 - [Setup and Installation](#setup-and-installation)
 - [API Endpoints and Usage](#api-endpoints-and-usage)
 - [Database Entity-Relationship Diagram (ERD)](#database-entity-relationship-diagram-erd)
@@ -31,12 +31,25 @@ Functions include:
 - IntelliJ IDEA or any Java IDE
 - Postman for API testing
 
-## Libraries and Tools Used
+## Libraries and Frameworks Used
 
-- Java
-- PostgreSQL (pgAdmin4)
-- IntelliJ IDEA
-- Postman
+### Core Libraries
+- Spring Boot Starter Web (version: 3.0.6)
+- MyBatis Spring Boot Starter (version: 3.0.0)
+- Spring Boot Starter Data JPA (version: 3.0.6)
+- PostgreSQL JDBC Driver (runtime)
+
+### Testing Libraries
+- Spring Boot Starter Test (scope: test)
+- TestNG (version: RELEASE, scope: test)
+- JUnit Jupiter API (version: 5.7.0, scope: test)
+- JUnit Jupiter Engine (version: 5.7.0, scope: test)
+- JUnit (scope: test)
+
+### Additional Libraries
+- Hibernate Core (version: 5.4.32.Final)
+- Javax Persistence API (version: 2.2)
+
 
 ## Setup and Installation
 
